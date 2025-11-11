@@ -1,0 +1,15 @@
+{
+  "extends": "@app/typescript-configs/base.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
+    "declaration": true,
+    "outDir": "./dist",
+    "paths": {
+      "got": ["./node_modules/got/dist/source/index.d.ts"]
+    },
+    "types": ["node"]
+  },
+  "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
+}

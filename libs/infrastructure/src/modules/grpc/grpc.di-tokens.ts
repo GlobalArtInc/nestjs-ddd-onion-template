@@ -1,0 +1,7 @@
+export const GRPC_PROVIDER = {
+  USER_SERVICE: Symbol('USER_SERVICE'),
+};
+
+export const GRPC_CLIENT_TOKENS = {
+  USER_SERVICE_CLIENT: Symbol('USER_SERVICE_CLIENT'),
+};

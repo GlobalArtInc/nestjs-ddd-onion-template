@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package user.service;
+
+import "messages.proto";
+import "google/protobuf/empty.proto";
+
+service UserService {
+  rpc GetUsers(google.protobuf.Empty) returns (GetUsersResponse);
+}
+

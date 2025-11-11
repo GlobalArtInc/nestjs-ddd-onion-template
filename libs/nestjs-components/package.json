@@ -1,0 +1,33 @@
+{
+  "name": "@app/nestjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsdown",
+    "clean": "rimraf dist",
+    "coverage": "vitest run --coverage",
+    "dev": "tsdown --watch"
+  },
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.js"
+  },
+  "types": "dist/index.d.ts",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@globalart/nestjs-logger": "catalog:prod",
+    "@nestjs/common": "catalog:prod",
+    "@nestjs/swagger": "catalog:prod",
+    "@nestjs/config": "catalog:prod",
+    "@nestjs/microservices": "catalog:prod",
+    "@app/typescript-configs": "workspace:*",
+    "rxjs": "catalog:prod"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:dev"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {}
+}

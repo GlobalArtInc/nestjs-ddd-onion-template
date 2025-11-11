@@ -1,0 +1,40 @@
+{
+  "name": "@app/shared-configs",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "build": "tsdown",
+    "coverage": "vitest run --coverage",
+    "dev": "tsdown --watch",
+    "upgrade": "npx npm-check-updates -u",
+    "check:deps": "depcheck"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.js"
+  },
+  "dependencies": {
+    "@globalart/nestjs-logger": "catalog:prod",
+    "@nestjs/axios": "catalog:prod",
+    "@nestjs/common": "catalog:prod",
+    "@nestjs/config": "catalog:prod",
+    "@nestjs/core": "catalog:prod",
+    "@nestjs/graphql": "catalog:prod",
+    "@nestjs/microservices": "catalog:prod",
+    "@nestjs/swagger": "catalog:prod",
+    "@nestjs/terminus": "catalog:prod",
+    "@nestjs/typeorm": "catalog:prod",
+    "zod": "catalog:prod"
+  },
+  "devDependencies": {
+    "@swc/core": "catalog:dev",
+    "@types/request-ip": "catalog:dev",
+    "@app/typescript-configs": "workspace:*",
+    "rimraf": "catalog:dev",
+    "tsdown": "catalog:dev"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {}
+}

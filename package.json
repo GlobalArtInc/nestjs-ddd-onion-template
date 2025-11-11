@@ -1,0 +1,42 @@
+{
+  "name": "nestjs-ddd-onion-template",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@10.21.0",
+  "scripts": {
+    "bootstrap": "pnpm install && pnpm run build",
+    "start:prod": "turbo run start:prod",
+    "build": "turbo run build",
+    "build:libs": "turbo run --filter=./libs/* build",
+    "build:apps": "turbo run --filter=./apps/* build",
+    "dev": "turbo run dev --concurrency=100%",
+    "dev:apps": "turbo run dev --filter=./apps/*",
+    "dev:libs": "turbo run dev --filter=./libs/*",
+    "format": "prettier --write ./{apps,libs}/**/*.{ts,json}",
+    "clean": "find . -name node_modules -o -name .turbo -o -name dist -type d -prune | xargs rm -rf"
+  },
+  "dependencies": {
+    "@nestjs/common": "catalog:prod",
+    "@nestjs/core": "catalog:prod",
+    "@nestjs/platform-express": "catalog:prod",
+    "reflect-metadata": "catalog:prod",
+    "rxjs": "catalog:prod"
+  },
+  "devDependencies": {
+    "turbo": "catalog:dev",
+    "@eslint/eslintrc": "catalog:dev",
+    "@eslint/js": "catalog:dev",
+    "@nestjs/cli": "catalog:dev",
+    "@nestjs/schematics": "catalog:dev",
+    "@nestjs/testing": "catalog:dev",
+    "@types/express": "catalog:dev",
+    "@types/jest": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "eslint": "catalog:dev",
+    "eslint-config-prettier": "catalog:dev",
+    "eslint-plugin-prettier": "catalog:dev"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@app/contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsdown",
+    "clean": "rimraf dist",
+    "coverage": "vitest run --coverage",
+    "dev": "tsdown --watch"
+  },
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.js"
+  },
+  "types": "dist/index.d.ts",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@globalart/ddd": "catalog:prod",
+    "zod": "catalog:prod",
+    "rxjs": "catalog:prod"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:dev",
+    "@app/typescript-configs": "workspace:*"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {}
+}

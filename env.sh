@@ -1,0 +1,3 @@
+export API_PORT=39000
+export GRPC_USER_SERVICE_HOST=localhost
+export USER_SERVICE_PORT=39001
